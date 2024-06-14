@@ -7,6 +7,7 @@ public class MatrixMultiplication {
         int matrix1rows;
         int matrix1cols;
         int matrix2cols;
+        boolean validInput = false;
 
         Scanner scanner = new Scanner(System.in);
 
