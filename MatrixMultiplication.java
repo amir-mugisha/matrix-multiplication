@@ -9,39 +9,39 @@ public class MatrixMultiplication {
 
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter number of rows of  matrix 1: ");
         while(!validInput){
-            System.out.println("Enter number of rows of  matrix 1: ");
             if(scanner.hasNextInt()){
                 matrix1rows = scanner.nextInt();
                 validInput = true;
             }else {
-                System.out.println("number of rows must be an integer, re-enter number of rows of matrix 1");
+                System.out.print("number of rows must be an integer, re-enter number of rows of matrix 1: ");
                 scanner.next();
             }
         }
 
         validInput = false; // Reset validInput for next validation
 
+        System.out.print("Enter number of columns of matrix 1: ");
         while(!validInput){
-            System.out.println("Enter number of columns of matrix 1: ");
             if(scanner.hasNextInt()){
                 matrix1cols = scanner.nextInt();
                 validInput = true;
             }else{
-                System.out.println("number of columns must be an integer, re-enter number of columns of matrix 1");
+                System.out.print("number of columns must be an integer, re-enter number of columns of matrix 1: ");
                 scanner.next();
             }
         }
 
         validInput = false;
 
+        System.out.printf("Matrix 2 must have %d rows, enter number of columns for matrix 2: ", matrix1cols);
         while(!validInput){
-            System.out.printf("Matrix 2 must have %d rows, enter number of columns for matrix 2: ", matrix1cols);
             if(scanner.hasNextInt()){
                 matrix2cols = scanner.nextInt();
                 validInput=true;
             }else{
-                System.out.println("number of columns must be an integer, re-enter number of columns of matrix 1");
+                System.out.print("number of columns must be an integer, re-enter number of columns of matrix 1: ");
                 scanner.next();
             }
         }
@@ -60,7 +60,7 @@ public class MatrixMultiplication {
                         matrix1[i][j] = scanner.nextInt();
                         validInput=true;
                     }else{
-                        System.out.println("All elements of the matrix must be integers, re-enter a valid input");
+                        System.out.print("All elements of the matrix must be integers, re-enter a valid input: ");
                         scanner.next();
                     }
                 }
